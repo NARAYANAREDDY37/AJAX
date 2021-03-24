@@ -11,3 +11,9 @@ https://narayanareddy37.github.io/AJAX/01_AJAX_Basics/
 ~ Below you can see how common requests are performed through AJAX
 
 https://narayanareddy37.github.io/AJAX/02_AJAX_REST_API/
+
+## Employee Portal Application 
+
+~ Below you can perform actions like adding employee, updating existing employee and deleting the employee
+
+https://narayanareddy37.github.io/AJAX/03_Employee_Portal_AJAX/
