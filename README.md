@@ -6,7 +6,7 @@
 
 https://narayanareddy37.github.io/AJAX/01_AJAX_Basics/
 
-## creating a REST API using Express server and adding common AJAX Requests
+## Creating a REST API using Express server and adding common AJAX Requests
 
 ~ Below you can see how common requests are performed through AJAX
 
