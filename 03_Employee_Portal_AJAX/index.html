@@ -79,7 +79,7 @@
               <div class="form-group">
                 <input
                   required
-                  id="add-email-name"
+                  id="add-email"
                   type="email"
                   class="form-control"
                   placeholder="Email"
@@ -106,6 +106,90 @@
                   type="submit"
                   value="Add Employee"
                   class="btn btn-success"
+                  id="add-employee"
+                />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--  Update Employee modal -->
+    <div class="modal" id="update-employee-modal">
+      <div class="modal-dialog">
+        <div class="modal-content animated slideInRight">
+          <div class="modal-header bg-secondary text-white">
+            <h3>Update Employee</h3>
+            <button class="close" data-dismiss="modal">
+              <i class="fa fa-times-circle text-white"></i>
+            </button>
+          </div>
+          <div class="modal-body bg-light">
+            <form action="" id="update-employee-form">
+              <input
+                hidden
+                id="update-emp-id"
+                type="text"
+                class="form-control"
+                placeholder="Employee ID"
+                required
+              />
+
+              <div class="form-group">
+                <input
+                  id="update-first-name"
+                  type="text"
+                  class="form-control"
+                  placeholder="First Name"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <input
+                  id="update-last-name"
+                  type="text"
+                  class="form-control"
+                  placeholder="Last Name"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <input
+                  id="update-email"
+                  type="text"
+                  class="form-control"
+                  placeholder="Email"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <select class="form-control" id="update-gender" required>
+                  <option value="">Select Gender</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Not mentioned">Not mentioned</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <input
+                  id="update-ip-address"
+                  type="text"
+                  class="form-control"
+                  placeholder="IP Address"
+                  required
+                />
+              </div>
+
+              <div>
+                <input
+                  type="submit"
+                  value="update Employee"
+                  class="btn btn-secondary"
                 />
               </div>
             </form>
@@ -132,9 +216,7 @@
                 <th>ACTIONS</th>
               </tr>
             </thead>
-            <tbody id="table-body">
-
-            </tbody>
+            <tbody id="table-body"></tbody>
           </table>
         </div>
       </div>
