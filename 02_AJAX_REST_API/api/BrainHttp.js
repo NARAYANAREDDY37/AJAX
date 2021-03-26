@@ -3,7 +3,8 @@ export class BrainHttp {
     this.http = new XMLHttpRequest();
   }
 
-  // GET Request
+  // GET Request (method)
+  //here we have used function inside a function. so we need callback to execute it properly
   get = (url, callback) => {
     this.http.open("GET", url, true);
     this.http.send();
@@ -18,7 +19,7 @@ export class BrainHttp {
     };
   };
 
-  //POST request with AJAX
+  //POST request 
   post = (url, employee, callback) => {
     this.http.open("POST", url, true);
     this.http.setRequestHeader("Content-Type", "application/json");
