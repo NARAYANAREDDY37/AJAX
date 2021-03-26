@@ -19,7 +19,7 @@ https://narayanareddy37.github.io/AJAX/02_AJAX_REST_API/
 - Built a custom server using Express which is a Node Js web application server framework.
 - Custom server is more controllable and which accepts all our requests
 - Created REST API calls using router at server side
-- Tested the Node Js server the Postman
+- Tested the Node Js server with Postman
 - Built a custom API with AJAX for GET, POST, PUT and DELETE requests which communicates with server
 - Integrated the API with front-end UI to visually see the CRUD operations
 
