@@ -1,7 +1,7 @@
 import { BrainHttp } from "./api/BrainHttp.js";
 const serverURL = `http://127.0.0.1:3000/api`;
 
-//DOM Content Loaded
+//DOM Content Loaded (get request)
 
 window.addEventListener("DOMContentLoaded", () => {
   fetchAllEmployees();
