@@ -17,3 +17,7 @@ https://narayanareddy37.github.io/AJAX/02_AJAX_REST_API/
 ~ Below you can perform actions like adding employee, updating existing employee and deleting the employee
 
 https://narayanareddy37.github.io/AJAX/03_Employee_Portal_AJAX/
+
+~ Here is the link to the YouTube video that shows AJAX requests are performed in the Portal 
+
+https://www.youtube.com/watch?v=hb0OMOGwClo
