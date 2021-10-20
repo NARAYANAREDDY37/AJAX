@@ -1,0 +1,24 @@
+{
+  "name": "00_express_server",
+  "version": "1.0.0",
+  "description": "REST API with AJAX on Express server",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NARAYANAREDDY37/REST-API-with-AJAX-on-Express-server.git"
+  },
+  "author": "NARAYANA REDDY",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NARAYANAREDDY37/REST-API-with-AJAX-on-Express-server/issues"
+  },
+  "homepage": "https://github.com/NARAYANAREDDY37/REST-API-with-AJAX-on-Express-server#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  }
+}
