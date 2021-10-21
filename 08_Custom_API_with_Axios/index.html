@@ -9,50 +9,50 @@
 		<link rel="stylesheet" href="../bootstrap/css/bootstrap.css" />
 		<link rel="stylesheet" href="../bootstrap/css/mdb.css" />
 		<link rel="stylesheet" href="../bootstrap/css/style.css" />
-		<title>Axios Basics</title>
+		<title>REST API using Axios</title>
 	</head>
 	<body>
-		<!-- Navbar -->
+		<!------------------- Navbar ---------------------->
 
 		<nav class="navbar navbar-expand-sm bg-dark">
 			<a href="#" class="navbar-brand text-white font-weight-bold"
-				>Axios Basics</a
+				>Custom REST API using Axios</a
 			>
 		</nav>
 		<!------------------ Start Here  ------------------>
-		<!-- Buttons section -->
-		<div class="container mt-5">
+		<div class="container mt-5"></div>
+
+		<!---------------- Button section -------------->
+		<div class="container">
 			<div class="row">
 				<div class="col text-center">
-					<button class="btn btn-primary" id="text-btn">Text Data</button>
-					<button class="btn btn-success" id="json-btn">JSON Data</button>
-					<button class="btn btn-warning" id="api-btn">API Data</button>
+					<button class="btn btn-success" id="get-btn">GET</button>
+					<button class="btn btn-secondary" id="post-btn">POST</button>
+					<button class="btn btn-warning" id="put-btn">PUT</button>
+					<button class="btn btn-danger" id="delete-btn">DELETE</button>
 				</div>
 			</div>
 		</div>
 
-		<!-- Data section -->
-		<div class="container-fluid mt-5">
+		<!-- Table section -->
+		<div class="container mt-4">
 			<div class="row">
-				<div class="col-md-4">
-					<div class="card">
-						<div class="card-header bg-primary text-white">Text Data</div>
-						<div class="card-body bg-light" id="text-card"></div>
-					</div>
-				</div>
-
-				<div class="col-md-4">
-					<div class="card">
-						<div class="card-header bg-success text-white">JSON Data</div>
-						<div class="card-body bg-light" id="json-card"></div>
-					</div>
-				</div>
-
-				<div class="col-md-4">
-					<div class="card">
-						<div class="card-header bg-warning text-white">API Data</div>
-						<div class="card-body bg-light" id="api-card"></div>
-					</div>
+				<div class="col">
+					<table
+						class="table table-hover text-center table-secondary table-striped"
+					>
+						<thead class="bg-info text-white">
+							<tr>
+								<th>EMP ID</th>
+								<th>FIRST NAME</th>
+								<th>LAST NAME</th>
+								<th>EMAIL</th>
+								<th>GENDER</th>
+								<th>IP ADDRESS</th>
+							</tr>
+						</thead>
+						<tbody id="table-body"></tbody>
+					</table>
 				</div>
 			</div>
 		</div>
@@ -67,7 +67,7 @@
 		<script src="../bootstrap/js/mdb.min.js"></script>
 
 		<!-- Application JS files -->
-		<script src="axios.min.js"></script>
+		<script src="./axios.min.js"></script>
 		<script src="app.js"></script>
 	</body>
 </html>

@@ -6,16 +6,15 @@ textButton.addEventListener('click', function () {
 });
 
 let fetchTextData = () => {
-	fetch('./data/messsage.txt').then((response) => {
+	axios.get('./data/messsage.txt').then((response) => {
 		if (response.status !== 200) {
 			console.log(`Something went wrong: ${response.status}`);
 			return;
 		}
 
-		response.text().then((data) => {
-			let htmlTemplate = `<h3>${data}</h3>`;
-			document.getElementById('text-card').innerHTML = htmlTemplate;
-		});
+		let finalData = response.data;
+		let htmlTemplate = `<h3>${finalData}</h3>`;
+		document.getElementById('text-card').innerHTML = htmlTemplate;
 	});
 };
 
@@ -23,15 +22,14 @@ let fetchTextData = () => {
 //JSON button
 let jsonButton = document.querySelector('#json-btn');
 jsonButton.addEventListener('click', function () {
-	fetch('./data/mobiles.json').then((response) => {
+	axios.get('./data/mobiles.json').then((response) => {
 		if (response.status !== 200) {
 			console.log(`Something went wrong: ${response.status}`);
 			return;
 		}
 
-		response.json().then((data) => {
-			displayJsonData(data);
-		});
+		let finalData = response.data;
+		displayJsonData(finalData);
 	});
 });
 
@@ -54,15 +52,14 @@ let displayJsonData = (mobile) => {
 //API button
 let apiButton = document.querySelector('#api-btn');
 apiButton.addEventListener('click', function () {
-	fetch('https://jsonplaceholder.typicode.com/users').then((response) => {
+	axios.get('https://jsonplaceholder.typicode.com/users').then((response) => {
 		if (response.status !== 200) {
 			console.log(`Something went wrong: ${response.status}`);
 			return;
 		}
 
-		response.json().then((data) => {
-			displayUsersData(data);
-		});
+		let finalData = response.data;
+		displayUsersData(finalData);
 	});
 });
 
