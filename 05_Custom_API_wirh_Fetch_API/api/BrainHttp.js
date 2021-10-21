@@ -1,57 +1,76 @@
 export class BrainHttp {
-  constructor() {
-    this.http = new XMLHttpRequest();
-  }
+	constructor() {}
 
-  // GET Request (method)
-  //here we have used function inside a function. so we need callback to execute it properly
-  get = (url, callback) => {
-    this.http.open("GET", url, true);
-    this.http.send();
-    this.http.onload = () => {
-      if (this.http.status === 200) {
-        let data = this.http.responseText;
-        let employees = JSON.parse(data);
-        callback(null, employees);
-      } else {
-        callback(`Error : ${this.http.status}`);
-      }
-    };
-  };
+	// GET Request (method)
+	get(url) {
+		return new Promise((resolve, reject) => {
+			fetch(url).then((response) => {
+				response
+					.json()
+					.then((data) => {
+						resolve(data);
+					})
+					.catch((err) => reject(err));
+			});
+		});
+	}
 
-  //POST request 
-  post = (url, employee, callback) => {
-    this.http.open("POST", url, true);
-    this.http.setRequestHeader("Content-Type", "application/json");
-    this.http.send(JSON.stringify(employee));
-    this.http.onload = () => {
-      let data = this.http.responseText;
-      let employees = JSON.parse(data);
-      callback(employees);
-    };
-  };
+	//POST request
+	post(url, data) {
+		return new Promise((resolve, reject) => {
+			fetch(url, {
+				method: 'POST',
+				headers: {
+					'content-Type': 'application/json',
+				},
+				body: JSON.stringify(data),
+			}).then((response) => {
+				response
+					.json()
+					.then((data) => {
+						resolve(data);
+					})
+					.catch((err) => reject(err));
+			});
+		});
+	}
 
-  // PUT request
-  put = (url, employee, callback) => {
-    this.http.open("PUT", url, true);
-    this.http.setRequestHeader("Content-Type", "application/json");
-    this.http.send(JSON.stringify(employee));
-    this.http.onload = () => {
-      let data = this.http.responseText;
-      let employees = JSON.parse(data);
-      callback(employees);
-    };
-  };
+	// PUT request
+	put(url, data) {
+		return new Promise((resolve, reject) => {
+			fetch(url, {
+				method: 'PUT',
+				headers: {
+					'content-Type': 'application/json',
+				},
+				body: JSON.stringify(data),
+			}).then((response) => {
+				response
+					.json()
+					.then((data) => {
+						resolve(data);
+					})
+					.catch((err) => reject(err));
+			});
+		});
+	}
 
-  //DELETE request
-  delete = (url, callback) => {
-    this.http.open("DELETE", url, true);
-    this.http.setRequestHeader("Content-Type", "application/json");
-    this.http.send();
-    this.http.onload = () => {
-      let data = this.http.responseText;
-      let employees = JSON.parse(data);
-      callback(employees);
-    };
-  };
+	//DELETE request
+	delete(url) {
+		return new Promise((resolve, reject) => {
+			fetch(url, {
+				method: 'DELETE',
+				headers: {
+					'content-Type': 'application/json',
+				},
+			}).then((response) => {
+				response
+					.json()
+					.then((data) => {
+						resolve(data);
+					})
+					.catch((err) => reject(err));
+			});
+		});
+	}
 }
